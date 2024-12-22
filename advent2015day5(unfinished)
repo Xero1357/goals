@@ -1,0 +1,9 @@
+A = ("ugknbfddgicrmopn", "haegwjzuvuyypxyu")
+B1 = [["a"], ["e"], ["i"], ["u"], ["o"]] #requirement1
+B2 = sum(A.count(v[0]) for v in B1) >= 3 
+C = any(A[i] == A[i + 1] for i in range(len(A) - 1)) #requirement2  
+D1 = [("ab"), ("cd"), ("pq"), ("xy")] #requirement3
+D2 = all(sub not in A for sub in D1) #any(sub in A for sub in D1) this is for false-true instead of true-false
+
+F = [A[i] for i in range(len(A)) if B2[i] and C[i] and D2[i]]
+print(F)
